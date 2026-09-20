@@ -319,13 +319,13 @@ def predict(model, image):
 
 
 model_choice = "EfficientNetB0"
-uploaded_file = st.file_uploader("ارفعي صورة الثوب", type=["jpg", "jpeg", "png"])
+uploaded_file = st.file_uploader("", type=["jpg", "jpeg", "png"])
 
 if uploaded_file:
     image = Image.open(uploaded_file).convert("RGB")
     st.image(image, use_container_width=True)
 
-    with st.spinner("جاري تحليل الثوب..."):
+    with st.spinner("analysing the embroidery..."):
         model = load_model(model_choice)
         probs = predict(model, image)
 
