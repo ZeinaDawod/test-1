@@ -323,7 +323,7 @@ uploaded_file = st.file_uploader("ارفعي صورة الثوب", type=["jpg", 
 
 if uploaded_file:
     image = Image.open(uploaded_file).convert("RGB")
-    st.image(image, use_column_width=True)
+    st.image(image, use_container_width=True)
 
     with st.spinner("جاري تحليل الثوب..."):
         model = load_model(model_choice)
