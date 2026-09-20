@@ -38,7 +38,7 @@ val_transform = transforms.Compose([
     transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
 ])
 
-st.set_page_config(page_title="🇵🇸 Palestinian Thobe Classifier", layout="centered")
+st.set_page_config(page_title="TatreezNet", layout="centered")
 
 st.markdown("""
 <style>
@@ -232,7 +232,7 @@ section[data-testid="stSidebar"] { display: none; }
 </style>
  
 <div class="title-box">
-    <div class="title-main">🇵🇸 Palestinian Thobe Classifier</div>
+    <div class="title-main">TatreezNet</div>
     <div class="title-sub">NABLUS · BETHLEHEM · JAFFA</div>
 </div>
  
