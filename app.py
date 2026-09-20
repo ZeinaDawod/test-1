@@ -318,7 +318,7 @@ def predict(model, image):
     return probs.numpy()
 
 
-model_choice = st.selectbox("اختاري الموديل", ["EfficientNetB0", "MobileNetV2"])
+model_choice = "EfficientNetB0"
 uploaded_file = st.file_uploader("ارفعي صورة الثوب", type=["jpg", "jpeg", "png"])
 
 if uploaded_file:
