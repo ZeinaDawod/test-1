@@ -333,16 +333,16 @@ if uploaded_file:
     pred_class = CLASSES[pred_idx]
     confidence = probs[pred_idx] * 100
 
-    region_ar = {'nablus': 'نابلس', 'bethlehem': 'بيت لحم', 'jaffa': 'يافا'}
+    region_ar = {'nablus': 'Nablus', 'bethlehem': 'Bethlehem', 'jaffa': 'Jaffa'}
 
     st.markdown(f"""
     <div class="result-card">
         <div class="result-class">{region_ar[pred_class]}</div>
-        <div class="result-conf">نسبة الثقة: {confidence:.1f}%</div>
+        <div class="result-conf">Confidence: {confidence:.1f}%</div>
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown('<div class="section-label">توزيع الاحتمالات</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-label">Distribution of Probabilities</div>', unsafe_allow_html=True)
     for cls, prob in zip(CLASSES, probs):
         col1, col2 = st.columns([3, 1])
         with col1:
